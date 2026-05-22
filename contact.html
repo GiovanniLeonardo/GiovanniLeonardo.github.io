@@ -27,11 +27,21 @@
     <h1>Contact</h1>
 
    <form id="contact-form">
+       <!-- Point the action directly to the public API handler -->
+       <form action="https://api.web3forms.com/submit" method="POST" class="secure-form">
+           
     <ul>
          <li>
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name"
                 placeholder="First name, Lastname" required="required">
+             
+             <!-- Paste your unique access key here to route the email securely -->
+    <input type="hidden" name="access_key" value="493c0841-750d-44f6-8aa4-9d46ad0c3238">
+
+             <!-- Optional: Automatically routes the user to a custom page after clicking submit -->
+    <input type="hidden" name="redirect" value="https://gioleonardo.com">
+             
             </li>
 
         <li>
